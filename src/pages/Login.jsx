@@ -10,7 +10,7 @@ class Login extends React.Component {
     this.state = {
       recName: '',
       savingUser: '',
-      reponseCome: '',
+      responseCome: '',
     };
   }
 

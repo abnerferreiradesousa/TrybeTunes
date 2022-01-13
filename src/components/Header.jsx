@@ -1,11 +1,11 @@
 import React from 'react'
 
 class Header extends React.Component {
-  render() { 
+  render() {
     return (
-      <div data-testid="header-component"></div>
+      <div data-testid="header-component" />
     );
   }
 }
- 
+
 export default Header;

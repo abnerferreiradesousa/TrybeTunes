@@ -1,6 +1,6 @@
 import React from 'react';
-import { createUser } from '../services/userAPI';
 import { Redirect } from 'react-router-dom';
+import { createUser } from '../services/userAPI';
 import Loading from './Loading';
 
 const MINIMUM_CHARACTERS = 3;
@@ -10,7 +10,7 @@ class Login extends React.Component {
     this.state = {
       recName: '',
       savingUser: '',
-      reponseCome: false,
+      reponseCome: '',
     };
   }
 
@@ -20,7 +20,7 @@ class Login extends React.Component {
     this.setState({ savingUser: true });
     const response = await createUser({ name: recName });
     if (response) return this.setState({ responseCome: true });
-    return this.setState({ savingUser: false, })
+    return this.setState({ savingUser: false });
   }
 
   handleValidate = () => {
@@ -32,7 +32,7 @@ class Login extends React.Component {
   handleInputChange = ({ target }) => {
     const { id, value } = target;
     this.setState({ [id]: value });
-    this.handleValidate;
+    this.handleValidate();
   }
 
   render() {
@@ -57,8 +57,9 @@ class Login extends React.Component {
               type="submit"
               data-testid="login-submit-button"
               disabled={ !this.handleValidate() }
-              onClick={ this.handleSendUser }>
-                Entrar
+              onClick={ this.handleSendUser }
+            >
+              Entrar
             </button>
           </form>
         </div>

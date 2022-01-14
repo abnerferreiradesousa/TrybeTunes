@@ -21,7 +21,8 @@ class Login extends React.Component {
     const response = await createUser({ name: recName });
     if (response) return this.setState({ responseCome: true });
     return this.setState({ savingUser: false });
-  }
+  };
+
   // v1
   // handleValidate = () => {
   //   const { recName } = this.state;
@@ -39,12 +40,12 @@ class Login extends React.Component {
   handleValidate = () => {
     const { recName } = this.state;
     return recName.length >= MINIMUM_CHARACTERS;
-  }
+  };
 
   // v2
   handleInputChange = ({ target: { id, value } }) => {
     this.setState({ [id]: value });
-  }
+  };
 
   render() {
     const { recName, savingUser, responseCome } = this.state;

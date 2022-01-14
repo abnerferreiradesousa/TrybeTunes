@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from '../pages/Loading';
 
@@ -13,6 +14,10 @@ class Header extends React.Component {
 
   async componentDidMount() {
     const response = await getUser();
+    this.handleSetResponse(response);
+  }
+
+  handleSetResponse = (response) => {
     if (response) {
       return this.setState({
         hasResponse: false,
@@ -27,6 +32,7 @@ class Header extends React.Component {
       <div data-testid="header-component">
         {hasResponse ? <Loading /> : null}
         <h1 data-testid="header-user-name">{userObj.name}</h1>
+        <Link to="/search" data-testid="link-to-search" />
       </div>
     );
   }

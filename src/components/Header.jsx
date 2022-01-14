@@ -33,6 +33,9 @@ class Header extends React.Component {
         {hasResponse ? <Loading /> : null}
         <h1 data-testid="header-user-name">{userObj.name}</h1>
         <Link to="/search" data-testid="link-to-search" />
+        <Link to="/favorites" data-testid="link-to-favorites" />
+        <Link to="/profile" data-testid="link-to-profile" />
+
       </div>
     );
   }

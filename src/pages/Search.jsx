@@ -39,7 +39,6 @@ class Search extends React.Component {
       nameArtist,
       albumsOfArtist,
     } = this.state;
-    console.log(albumsOfArtist);
     return (
       <div data-testid="page-search">
         <Header />

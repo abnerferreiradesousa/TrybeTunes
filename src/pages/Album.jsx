@@ -11,12 +11,19 @@ class Album extends React.Component {
       musics: [],
       nameOfArtist: '',
       albumOfArtist: '',
+      // favoriteMusics: [],
     };
   }
 
   componentDidMount() {
     this.callAPI();
+    // this.handleGetFavMusics();
   }
+
+  // handleGetFavMusics = async () => {
+  //   const response = await getFavoriteSongs();
+  //   this.setState({ favoriteMusics: response });
+  // };
 
   callAPI = async () => {
     const { match: { params: { id } } } = this.props;
@@ -24,8 +31,8 @@ class Album extends React.Component {
     const responseMusics = response.filter((music) => music.trackName);
     this.setState({
       musics: responseMusics,
-      nameOfArtist: response[1].artistName,
-      albumOfArtist: response[1].collectionName,
+      nameOfArtist: responseMusics[0].artistName,
+      albumOfArtist: responseMusics[0].collectionName,
     });
   }
 

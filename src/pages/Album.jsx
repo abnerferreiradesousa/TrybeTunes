@@ -22,7 +22,6 @@ class Album extends React.Component {
     const { match: { params: { id } } } = this.props;
     const response = await getMusics(id);
     const responseMusics = response.filter((music) => music.trackName);
-    console.log(responseMusics);
     this.setState({
       musics: responseMusics,
       nameOfArtist: response[1].artistName,
@@ -39,11 +38,16 @@ class Album extends React.Component {
         { <h3 data-testid="album-name">{`Collection Name ${albumOfArtist}`}</h3> }
         { musics.map((music) => (
           <section key={ music.trackName }>
-            <MusicCard previewUrl={ music.previewUrl } trackName={ music.trackName } />
+            <MusicCard
+              listMusic={ musics }
+              previewUrl={ music.previewUrl }
+              trackName={ music.trackName }
+              trackId={ music.trackId }
+            />
           </section>
         )) }
         {/* v1
-          musics.filter(({ trackName }) => (trackName === true))
+          musics.filter(({ trackName }) => trackName)
           .map(({ trackName, previewUrl }) => (
             <section key={ trackName }>
               <MusicCard previewUrl={ previewUrl } trackName={ trackName } />

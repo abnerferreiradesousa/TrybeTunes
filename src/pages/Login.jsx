@@ -19,8 +19,8 @@ class Login extends React.Component {
     const { recName } = this.state;
     this.setState({ savingUser: true });
     const response = await createUser({ name: recName });
-    if (response) return this.setState({ responseCome: true });
-    return this.setState({ savingUser: false });
+    if (response) this.setState({ responseCome: true });
+    this.setState({ savingUser: false });
   };
 
   // v1

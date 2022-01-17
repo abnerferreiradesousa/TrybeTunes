@@ -14,12 +14,10 @@ class Search extends React.Component {
     };
   }
 
-  handleFindArtist = async (event) => {
-    event.preventDefault();
-    const { artist } = this.state;
-    this.setState({ statusButton: true });
-    const responseAlbums = await searchAlbumsAPI(artist);
-    this.setState({ artist: '', albumsOfArtist: responseAlbums });
+  handleInputArtist = ({ target }) => {
+    const { name, value } = target;
+    // Abaixo, estamos duplicando as informações recebidas do <input>
+    this.setState({ [name]: value, nameArtist: value });
   };
 
   handleValidateInput = () => {
@@ -27,9 +25,12 @@ class Search extends React.Component {
     return artist.length >= 2;
   };
 
-  handleInputArtist = ({ target }) => {
-    const { name, value } = target;
-    this.setState({ [name]: value, nameArtist: value });
+  handleFindArtist = async (event) => {
+    event.preventDefault();
+    const { artist } = this.state;
+    this.setState({ statusButton: true });
+    const responseAlbums = await searchAlbumsAPI(artist);
+    this.setState({ albumsOfArtist: responseAlbums, artist: '' });
   };
 
   render() {
@@ -39,6 +40,7 @@ class Search extends React.Component {
       nameArtist,
       albumsOfArtist,
     } = this.state;
+
     return (
       <div data-testid="page-search">
         <Header />

@@ -2,15 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import '../styles/Search.css';
 
 class Search extends React.Component {
   constructor() {
     super();
     this.state = {
-      artist: '',
+      artist: 'bruno mars',
       statusButton: '',
       nameArtist: '',
       albumsOfArtist: [],
+      notFound: false,
     };
   }
 
@@ -30,7 +32,10 @@ class Search extends React.Component {
     const { artist } = this.state;
     this.setState({ statusButton: true });
     const responseAlbums = await searchAlbumsAPI(artist);
-    this.setState({ albumsOfArtist: responseAlbums, artist: '' });
+    this.setState({ albumsOfArtist: responseAlbums, artist: '' }, () => {
+      const { albumsOfArtist } = this.state;
+      if (albumsOfArtist.length === 0) this.setState({ notFound: true });
+    });
   };
 
   render() {
@@ -39,18 +44,23 @@ class Search extends React.Component {
       statusButton,
       nameArtist,
       albumsOfArtist,
+      notFound,
     } = this.state;
 
     return (
-      <div data-testid="page-search">
+      <section data-testid="page-search" className="search-section">
         <Header />
-        <form action="">
-          <label htmlFor="inpSearchArtist">
+        <form action="" className="form-music-content">
+          <label
+            htmlFor="inpSearchArtist"
+            className="label-artist-content"
+          >
             <input
               type="text"
               name="artist"
               id="inpSearchArtist"
               data-testid="search-artist-input"
+              className="input-artist-content"
               placeholder="Nome do artista"
               value={ artist }
               onChange={ this.handleInputArtist }
@@ -60,32 +70,47 @@ class Search extends React.Component {
             type="submit"
             name="btnSearch"
             data-testid="search-artist-button"
+            className="button-container button-search-artist"
             disabled={ !this.handleValidateInput() }
             onClick={ this.handleFindArtist }
           >
-            Procurar
+            PESQUISAR
           </button>
         </form>
-        <h2>{statusButton ? `Resultado de álbuns de: ${nameArtist}` : null}</h2>
-        {albumsOfArtist.length > 0
-          ? albumsOfArtist.map(({
-            artworkUrl100,
-            collectionId,
-            artistName,
-            collectionName,
-          }) => (
-            <section key={ collectionId }>
-              <Link to={ `/album/${collectionId}` }>
-                <li data-testid={ `link-to-album-${collectionId}` }>
+        <h2
+          className="search-artist-content"
+        >
+          {statusButton ? `Resultado de álbuns de: ${nameArtist}` : null}
+        </h2>
+        <section
+          className="all-albums-content"
+        >
+          {albumsOfArtist.length > 0
+            && albumsOfArtist.map(({
+              artworkUrl100,
+              collectionId,
+              artistName,
+              collectionName,
+            }) => (
+              <section
+                key={ collectionId }
+                data-testid={ `link-to-album-${collectionId}` }
+                className="each-album"
+              >
+                <Link
+                  to={ `/album/${collectionId}` }
+                  className="link-album-content"
+                >
                   <img src={ artworkUrl100 } alt={ artistName } />
-                  <h2>{collectionName}</h2>
-                  <h3>{artistName}</h3>
-                </li>
-              </Link>
-            </section>
-          ))
-          : <h2>Nenhum álbum foi encontrado</h2>}
-      </div>
+                  <h3 className="margin-top-content">{collectionName}</h3>
+                  <h4 className="margin-top-content">{artistName}</h4>
+                </Link>
+              </section>
+            ))}
+          {notFound
+            && <h2 className="search-artist-content ">Nenhum álbum foi encontrado</h2>}
+        </section>
+      </section>
     );
   }
 }

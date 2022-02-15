@@ -9,6 +9,8 @@ import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
 import NotFound from './pages/NotFound';
 
+import './styles/Default.css';
+
 class App extends React.Component {
   render() {
     return (

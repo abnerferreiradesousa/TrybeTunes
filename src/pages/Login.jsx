@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import '../styles/Login.css';
 
 const MINIMUM_CHARACTERS = 3;
 class Login extends React.Component {
@@ -50,29 +51,31 @@ class Login extends React.Component {
   render() {
     const { recName, savingUser, responseCome } = this.state;
     return (
-      <section>
+      <section className="login-content-page">
         { responseCome ? <Redirect to="/search" /> : null }
-        { savingUser ? <Loading /> : null }
-        <div data-testid="page-login">
+        <div data-testid="page-login" className="form-content">
           <form action="">
             <label htmlFor="input-name">
-              Digite seu nome
               <input
+                className="width-content"
                 type="text"
                 id="recName"
                 data-testid="login-name-input"
+                placeholder="Nome"
                 value={ recName }
                 onChange={ this.handleInputChange }
               />
             </label>
             <button
               type="submit"
+              className="width-content button-container"
               data-testid="login-submit-button"
               disabled={ !this.handleValidate() }
               onClick={ this.handleSendUser }
             >
-              Entrar
+              ENTRAR
             </button>
+            { savingUser ? <Loading /> : null }
           </form>
         </div>
       </section>

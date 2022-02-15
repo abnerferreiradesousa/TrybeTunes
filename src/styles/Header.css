@@ -1,0 +1,30 @@
+.user_name {
+  font-size: 25px;
+  margin-left: 40px;
+  margin-top: 60px;
+}
+
+.header-content {
+  align-items: center;
+  background-color: #231d1e;
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.link-content {
+  color: white;
+  text-decoration: none;
+}
+
+.link-content:hover {
+  font-size: 30px;
+  transition: 0.2s;
+}
+
+.header-content:hover {
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 78%);
+  transition: 1s;
+}

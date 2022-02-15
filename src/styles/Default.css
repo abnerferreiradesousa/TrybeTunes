@@ -1,0 +1,22 @@
+* {
+  border: 0;
+  /* deixa o botão do tamanho do input */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.button-container {
+  background-color: #231d1e;
+  color: #fffee4;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.width-content {
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 8px;
+  width: 100%;
+}

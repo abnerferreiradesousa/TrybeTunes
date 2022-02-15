@@ -1,0 +1,69 @@
+.form-music-content {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  width: 50%;
+}
+
+.search-section {
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 78%);
+  height: 1000vh;
+}
+
+.input-artist-content {
+  border: none;
+  border-radius: 15px 0 0 15px;
+  padding: 13px;
+  width: 100%;
+}
+
+.button-search-artist {
+  border-radius: 0 15px 15px 0;
+  flex-grow: 0.25;
+}
+
+.label-artist-content {
+  flex-grow: 1;
+}
+
+.search-artist-content {
+  margin-left: 40px;
+  margin-top: 60px;
+}
+
+.all-albums-content {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+  text-align: center;
+  /* width: 90%; */
+}
+
+.each-album {
+  align-items: center;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  width: 250px;
+}
+
+img {
+  border-radius: 10%;
+  height: 200px;
+  width: 200px;
+}
+
+.link-album-content {
+  color: #231d1e;
+  text-decoration: none;
+}
+
+.margin-top-content {
+  margin-top: 20px;
+}

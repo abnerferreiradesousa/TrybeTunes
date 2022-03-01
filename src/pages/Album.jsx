@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
 
+import '../styles/Album.css';
+
 class Album extends React.Component {
   constructor() {
     super();
@@ -39,21 +41,31 @@ class Album extends React.Component {
   render() {
     const { musics, albumOfArtist, nameOfArtist } = this.state;
     return (
-      <div data-testid="page-album">
+      <div data-testid="page-album" className="albums-content">
         <Header />
-        { <h3 data-testid="artist-name">{`Artist Name ${nameOfArtist}`}</h3> }
-        { <h3 data-testid="album-name">{`Collection Name ${albumOfArtist}`}</h3> }
-        { musics.map((music) => (
-          <section key={ music.trackName }>
+        <div className="title-album">
+          {
+            <h1
+              data-testid="album-name"
+            >
+              {`Collection Name ${albumOfArtist}`}
+            </h1>
+          }
+          { <h2 data-testid="artist-name">{`Artist Name ${nameOfArtist}`}</h2> }
+        </div>
+
+        <section className="music-card-content">
+          { musics.map((music) => (
             <MusicCard
+              key={ music.trackName }
               listMusic={ musics }
               previewUrl={ music.previewUrl }
               trackName={ music.trackName }
               trackId={ music.trackId }
               music={ music }
             />
-          </section>
-        )) }
+          )) }
+        </section>
         {/* v1
           musics.filter(({ trackName }) => trackName)
           .map(({ trackName, previewUrl }) => (

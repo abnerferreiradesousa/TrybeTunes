@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.albums-content {
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 78%);
+}
+
+.music-card-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.title-album {
+  margin-top: 100px;
+  text-align: center;
+}

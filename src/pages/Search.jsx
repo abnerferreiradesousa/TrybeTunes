@@ -8,7 +8,7 @@ class Search extends React.Component {
   constructor() {
     super();
     this.state = {
-      artist: 'bruno mars',
+      artist: '',
       statusButton: '',
       nameArtist: '',
       albumsOfArtist: [],

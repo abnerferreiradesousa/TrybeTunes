@@ -1,0 +1,24 @@
+.card-content {
+  align-items: center;
+  background-color: #231d1e;
+  border-radius: 10px;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  padding: 10px;
+  width: 75%;
+}
+
+.artist-title {
+  width: 59%;
+}
+
+.card__input {
+  margin: 5px;
+}
+
+.card__label {
+  margin: 10px;
+
+}

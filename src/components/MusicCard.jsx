@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import Loading from '../pages/Loading';
+
+import '../styles/MusicCard.css';
 
 class MusicCard extends React.Component {
   constructor() {
@@ -40,31 +42,40 @@ class MusicCard extends React.Component {
   handleSaveFavMusic = async ({ target: { checked } }) => {
     const { music } = this.props;
     this.setState({ loading: true, isFavorite: checked });
-    const response = await addSong(music);
-    if (response) this.setState({ loading: false });
+    if (checked) await addSong(music);
+    if (!checked) await removeSong(music);
+    this.setState({ loading: false });
   }
 
   render() {
     const { previewUrl, trackName, trackId } = this.props;
     const { loading, isFavorite } = this.state;
     return (
-      <section>
-        <span>{trackName}</span>
-        <audio data-testid="audio-component" src={ previewUrl } controls>
-          <track kind="captions" />
-        </audio>
-        <label htmlFor="favoriteMusic">
-          Favorita
-          <input
-            type="checkbox"
-            name="loading"
-            checked={ isFavorite }
-            id={ trackId }
-            data-testid={ `checkbox-music-${trackId}` }
-            onChange={ this.handleSaveFavMusic }
-          />
-          { loading && <Loading />}
-        </label>
+
+      <section className="card-content">
+        <section className="artist-title">
+          <h2>{trackName}</h2>
+        </section>
+        <section>
+          <audio data-testid="audio-component" src={ previewUrl } controls>
+            <track kind="captions" />
+          </audio>
+        </section>
+        { loading ? <Loading />
+          : (
+            <label htmlFor="favoriteMusic" className="card__label">
+              Favoritar
+              <input
+                type="checkbox"
+                name="loading"
+                className="card__input"
+                checked={ isFavorite }
+                id={ trackId }
+                data-testid={ `checkbox-music-${trackId}` }
+                onChange={ this.handleSaveFavMusic }
+              />
+            </label>
+          )}
       </section>
     );
   }

@@ -2,7 +2,9 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import Footer from '../components/Footer';
 import '../styles/Login.css';
+import '../styles/Default.css';
 
 const MINIMUM_CHARACTERS = 3;
 class Login extends React.Component {
@@ -53,8 +55,8 @@ class Login extends React.Component {
     return (
       <section className="login-content-page">
         { responseCome ? <Redirect to="/search" /> : null }
-        <div data-testid="page-login" className="form-content">
-          <form action="">
+        <section data-testid="page-login" className="form-content">
+          <form action="" className="login__form">
             <label htmlFor="input-name">
               <input
                 className="width-content"
@@ -77,7 +79,10 @@ class Login extends React.Component {
             </button>
             { savingUser ? <Loading /> : null }
           </form>
-        </div>
+        </section>
+        <section className="footer-container">
+          <Footer />
+        </section>
       </section>
     );
   }

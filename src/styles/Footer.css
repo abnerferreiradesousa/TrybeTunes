@@ -1,6 +1,8 @@
 .footer-content {
   align-items: center;
   display: flex;
+  font-size: 17px;
+  height: 20px;
   justify-content: center;
   width: 100%;
 }

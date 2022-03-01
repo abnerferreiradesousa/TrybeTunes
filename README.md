@@ -38,8 +38,9 @@ Neste projeto, fui capaz de:
  
   * Exercitar a comunicação ao tirar dúvidas de colegas e ao esclarecer minhas próprias dúvidas com os mesmos(cabe ressaltar que o projeto foi desenvolvido individualmente, porém a Trybe estimula que mesmo em projetos individuais, os alunos se comuniquem entri si para o aprendizado mútuo, mas sempre tendo em vista as regras de Honestidade Intelectual na Trybe);
   * Ir em busca de outras soluções para problemas estruturados;
-  * Gerencimento de tempo, para não comprometer o prazo de entrega do projeto;
+  * Gerenciar o tempo de forma a não comprometer o prazo de entrega do projeto;
   * Responsabilidade com o foi requisitado, saber o momento de tirar dúvidas para assim não comprometer a entrega dos requisitos;
-  ## Desenvolvimento
+
+## Desenvolvimento
 
 Neste projeto fui capaz de me desafiar bastante tanto no JavaScript em si, como também em React, React-Router e no uso do estado local dos componentes. Para mim, o principal diferencial desse projeto foi poder ajudar outros colegas, entender o que eles precisavam e como eu poderia ajudá-los a partir do que eles já tinham desenvolvido.

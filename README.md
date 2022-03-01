@@ -42,4 +42,4 @@ Neste projeto, fui capaz de:
   * Responsabilidade com o foi requisitado, saber o momento de tirar dúvidas para assim não comprometer a entrega dos requisitos;
   ## Desenvolvimento
 
-Neste projeto fui capaz de me desafiar bastante tanto no JavaScript em si, como também em React e no uso do estado local dos componentes. Para mim, o principal diferencial desse projeto foi poder ajudar outros colegas, entender o que eles precisavam e como eu poderia ajudá-los a partir do que eles já tinham desenvolvido.
+Neste projeto fui capaz de me desafiar bastante tanto no JavaScript em si, como também em React, React-Router e no uso do estado local dos componentes. Para mim, o principal diferencial desse projeto foi poder ajudar outros colegas, entender o que eles precisavam e como eu poderia ajudá-los a partir do que eles já tinham desenvolvido.

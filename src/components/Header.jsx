@@ -51,11 +51,11 @@ class Header extends React.Component {
                   FAVORITAS
                 </Link>
                 <Link
-                  to="/profile"
+                  to="/"
                   className="link-content"
                   data-testid="link-to-profile"
                 >
-                  PERFIL
+                  LOG OUT
                 </Link>
               </section>
               <div className="user_name">

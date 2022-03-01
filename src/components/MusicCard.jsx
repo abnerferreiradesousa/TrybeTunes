@@ -53,7 +53,7 @@ class MusicCard extends React.Component {
         </section>
         { loading ? <Loading />
           : (
-            <label htmlFor="favoriteMusic" className="card__label">
+            <label htmlFor={ trackId } className="card__label">
               Favoritar
               <input
                 type="checkbox"

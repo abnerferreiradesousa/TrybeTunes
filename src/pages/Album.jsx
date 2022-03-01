@@ -66,13 +66,6 @@ class Album extends React.Component {
             />
           )) }
         </section>
-        {/* v1
-          musics.filter(({ trackName }) => trackName)
-          .map(({ trackName, previewUrl }) => (
-            <section key={ trackName }>
-              <MusicCard previewUrl={ previewUrl } trackName={ trackName } />
-            </section>
-          )) } */}
       </div>
     );
   }

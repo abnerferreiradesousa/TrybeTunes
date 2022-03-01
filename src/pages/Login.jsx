@@ -26,26 +26,11 @@ class Login extends React.Component {
     this.setState({ savingUser: false });
   };
 
-  // v1
-  // handleValidate = () => {
-  //   const { recName } = this.state;
-  //   if (recName.length >= MINIMUM_CHARACTERS) return true;
-  //   return false;
-  // }
-
-  // v1
-  // handleInputChange = ({ target: { id, value } }) => {
-  //   this.setState({ [id]: value });
-  //   this.handleValidate();
-  // }
-
-  // v2
   handleValidate = () => {
     const { recName } = this.state;
     return recName.length >= MINIMUM_CHARACTERS;
   };
 
-  // v2
   handleInputChange = ({ target: { id, value } }) => {
     this.setState({ [id]: value });
   };

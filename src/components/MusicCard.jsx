@@ -17,16 +17,6 @@ class MusicCard extends React.Component {
 
   componentDidMount() {
     this.handleFavMusic();
-    // v1
-    // getFavoriteSongs().then((response) => {
-    //   console.log(response.length);
-    //   this.setState((prevState, props) => {
-    //     const responseMusics = response
-    //       .some((idSongs) => Number(idSongs) === props.trackId);
-    //     return {
-    //       isFavorite: responseMusics };
-    //   });
-    // });
   }
 
   handleFavMusic = async () => {

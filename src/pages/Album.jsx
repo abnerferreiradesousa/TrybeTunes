@@ -13,19 +13,12 @@ class Album extends React.Component {
       musics: [],
       nameOfArtist: '',
       albumOfArtist: '',
-      // favoriteMusics: [],
     };
   }
 
   componentDidMount() {
     this.callAPI();
-    // this.handleGetFavMusics();
   }
-
-  // handleGetFavMusics = async () => {
-  //   const response = await getFavoriteSongs();
-  //   this.setState({ favoriteMusics: response });
-  // };
 
   callAPI = async () => {
     const { match: { params: { id } } } = this.props;

@@ -11,27 +11,12 @@ class Favorites extends React.Component {
     this.state = {
       favMusics: [],
       isLoading: true,
-      // isUpdate: false,
     };
   }
 
   componentDidMount() {
     this.handleGetFavMusics();
   }
-
-  // componentDidUpdate() {
-  //   this.handleGetFavMusics();
-  // }
-
-  // handleUpdate = () => {
-  //   this.setState({ isUpdate: true }, async () => {
-  //     const { isUpdate } = this.state;
-  //     if (isUpdate) {
-  //       const response = await getFavoriteSongs();
-  //       this.setState({ favMusics: response });
-  //     }
-  //   });
-  // };
 
   componentDidUpdate() {
     this.handleGetFavMusics();
@@ -60,7 +45,6 @@ class Favorites extends React.Component {
                 trackName={ music.trackName }
                 trackId={ music.trackId }
                 music={ music }
-              // handleUpdate={ this.handleUpdate }
               />
             ))
           }

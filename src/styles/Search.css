@@ -35,7 +35,6 @@ body {
 }
 
 .all-albums-content {
-  /* border: 1px solid black; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -46,12 +45,12 @@ body {
 .each-album {
   align-items: center;
   background-color: #231d1e;
-  border-radius: 30px;
   border: 1px solid black;
-  padding: 20px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   margin: 25px;
+  padding: 20px;
   width: 250px;
 }
 
@@ -62,7 +61,6 @@ img {
 }
 
 .link-album-content {
-  /* color: #231d1e; */
   color: white;
   text-decoration: none;
 }

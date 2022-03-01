@@ -18,7 +18,6 @@ class Search extends React.Component {
 
   handleInputArtist = ({ target }) => {
     const { name, value } = target;
-    // Abaixo, estamos duplicando as informações recebidas do <input>
     this.setState({ [name]: value, nameArtist: value });
   };
 

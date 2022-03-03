@@ -11,6 +11,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+input:focus {
+  box-shadow: 0;
+  outline: 0;
+}
+
 .button-container {
   background-color: #231d1e;
   color: #fffee4;

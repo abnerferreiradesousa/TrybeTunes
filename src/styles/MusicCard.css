@@ -22,3 +22,40 @@
   margin: 10px;
 
 }
+
+@media screen and (max-width: 1000px) {
+
+  .card-content {
+    width: 95%;
+  }
+
+  .artist-title {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .card-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .artist-title {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    margin: 10px;
+    width: 100%;
+  }
+
+  .card__audio {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

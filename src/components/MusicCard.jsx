@@ -46,8 +46,12 @@ class MusicCard extends React.Component {
         <section className="artist-title">
           <h2>{trackName}</h2>
         </section>
-        <section>
-          <audio data-testid="audio-component" src={ previewUrl } controls>
+        <section className="card__audio">
+          <audio
+            data-testid="audio-component"
+            src={ previewUrl }
+            controls
+          >
             <track kind="captions" />
           </audio>
         </section>

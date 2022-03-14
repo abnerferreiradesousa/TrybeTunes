@@ -75,6 +75,14 @@ class Search extends React.Component {
           >
             PESQUISAR
           </button>
+          <section
+            aria-hidden
+            className="btn-lup button-search-artist"
+            disabled={ !this.handleValidateInput() }
+            onClick={ this.handleFindArtist }
+          >
+            <i className="fa fa-search" />
+          </section>
         </form>
         <h2
           className="search-artist-content"

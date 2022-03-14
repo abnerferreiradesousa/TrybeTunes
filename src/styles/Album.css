@@ -19,3 +19,12 @@
   margin-top: 100px;
   text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+
+  .album__info {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+
+}

@@ -54,8 +54,8 @@ class Login extends React.Component {
               />
             </label>
             <button
-              type="submit"
-              className="width-content button-container"
+              type="button"
+              className="width-content button-container-login"
               data-testid="login-submit-button"
               disabled={ !this.handleValidate() }
               onClick={ this.handleSendUser }

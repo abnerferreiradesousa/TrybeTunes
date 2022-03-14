@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/Footer.css';
 
 const Footer = () => (
-  <div
+  <section
     className="footer-content"
     style={ { textAlign: 'center', marginBottom: 10 } }
   >
@@ -15,7 +15,7 @@ const Footer = () => (
     >
       Abner Sousa
     </a>
-  </div>
+  </section>
 );
 
 export default Footer;

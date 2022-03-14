@@ -24,7 +24,165 @@
   transition: 0.1s;
 }
 
+.logo {
+  color: #0fc3e8;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.logo font {
+  color: #fff;
+}
+
 .header-content:hover {
   background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 78%);
   transition: 1s;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 99;
+}
+
+/* .header__links {
+  height: 90vh;
+} */
+
+.menu-icon {
+  display: none;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+.menu-icon .fa-times {
+  transform: rotate(360deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-icon .fa-bars {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+
+/* .logo {
+  font-weight: 600;
+  font-size: 25px;
+  color: tomato;
+}
+
+.logo font {
+  color: #fff;
+} */
+
+
+.menu-list {
+  align-items: center;
+  display: flex;
+  /* height: 90vh; */
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+}
+
+
+.menu-list li a {
+  color: #fff;
+  font-weight: 300;
+  margin-left: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.menu-list li:last-child a {
+  border-radius: 2px;
+  font-weight: 300;
+  margin-left: 20px;
+  padding: 5px 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-list li a:hover ,
+.menu-list li a.active {
+  background-color: #fff;
+  border-radius: 2px;
+  color: #000;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu-list li a {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .menu-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    width: 100%;
+  }
+
+  .menu-list {
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 64px;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .menu-list li {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu-list li a, .menu-list li:last-child a {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+
+  .menu-list.close {
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* .header__user {
+    width: 100%;
+
+  } */
+
+  .user_name {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .user_name h1 {
+    margin: 0 7%;
+  }
+
 }

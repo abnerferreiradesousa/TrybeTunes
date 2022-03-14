@@ -10,6 +10,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 70px;
+  /* position: absolute; */
+  /* top: 30px; */
   width: 50%;
 }
 
@@ -30,6 +32,7 @@ body {
 }
 
 .search-artist-content {
+  font-size: 21px;
   margin-left: 40px;
   margin-top: 60px;
 }
@@ -45,7 +48,6 @@ body {
 .each-album {
   align-items: center;
   background-color: #231d1e;
-  border: 1px solid black;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -74,5 +76,61 @@ img {
 }
 
 .margin-top-content {
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+.btn-lup {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .button-container {
+    font-size: 0.7rem;
+  }
+
+  .form-music-content {
+    width: 80%;
+  }
+
+  .search-artist-content {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .btn-lup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #231d1e;
+    color: #fffee4;
+    font-weight: bold;
+    flex-grow: 0.8;
+  }
+
+  .button-container {
+    display: none;
+  }
+
+  .form-music-content {
+    width: 90%;
+  }
+
+  .each-album {
+    margin: 10px;
+    height: 350px;
+    width: 85%;
+  }
+
+  .each-album img {
+    height: 220px;
+    width: 220px;
+  }
+
+  .search-artist-content {
+    font-size: 1.4rem;
+    margin: 15% 7% 0;
+    width: 100%;
+  }
 }

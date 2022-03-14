@@ -39,12 +39,20 @@ class Album extends React.Component {
         <div className="title-album">
           {
             <h1
+              className="album__info"
               data-testid="album-name"
             >
               {`Collection Name ${albumOfArtist}`}
             </h1>
           }
-          { <h2 data-testid="artist-name">{`Artist Name ${nameOfArtist}`}</h2> }
+          {
+            <h2
+              className="album__info"
+              data-testid="artist-name"
+            >
+              {`Artist Name ${nameOfArtist}`}
+            </h2>
+          }
         </div>
 
         <section className="music-card-content">

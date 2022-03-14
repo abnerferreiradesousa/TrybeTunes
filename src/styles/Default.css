@@ -23,6 +23,13 @@ input:focus {
   letter-spacing: 0.5px;
 }
 
+.button-container-login {
+  background-color: #231d1e;
+  color: #fffee4;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
 .button-container:hover {
   cursor: pointer;
 }

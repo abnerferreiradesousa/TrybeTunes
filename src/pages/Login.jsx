@@ -49,6 +49,7 @@ class Login extends React.Component {
                 id="recName"
                 data-testid="login-name-input"
                 placeholder="Nome"
+                autoComplete="off"
                 value={ recName }
                 onChange={ this.handleInputChange }
               />
@@ -62,7 +63,7 @@ class Login extends React.Component {
             >
               ENTRAR
             </button>
-            { savingUser ? <Loading /> : null }
+            { savingUser && <Loading /> }
           </form>
         </section>
         <section className="footer-container">

@@ -61,6 +61,7 @@ class Search extends React.Component {
               data-testid="search-artist-input"
               className="input-artist-content"
               placeholder="Nome do artista"
+              autoComplete="off"
               value={ artist }
               onChange={ this.handleInputArtist }
             />
@@ -87,7 +88,7 @@ class Search extends React.Component {
         <h2
           className="search-artist-content"
         >
-          {statusButton ? `Resultado de álbuns de: ${nameArtist}` : null}
+          {statusButton && `Resultado de álbuns de: ${nameArtist}`}
         </h2>
         <section
           className="all-albums-content"

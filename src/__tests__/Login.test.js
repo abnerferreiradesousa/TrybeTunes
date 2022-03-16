@@ -32,14 +32,7 @@ describe('Tela de Login', () => {
     userEvent.click(btnEntrar);
     // Verificar se esse teste esta correto.
     //----consegui achar a tela
-    // await waitFor(() => {
-    //   const { location: { pathname } } = history;
-    //   expect(pathname).toBe('/search');
-    // }, { timeout: 4000})
+      // const { location: { pathname } } = history;
+      // expect(pathname).toBe('/search');
   })
-
-  // it('Ao clicar no link "Abner Sousa" redireciona para rota "https://github.com/abnerferreiradesousa"', () => {
-  //   const { history } = renderWithRouter(<App />);
-    
-  // })
 })

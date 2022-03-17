@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import '../styles/Search.css';
+import Footer from '../components/Footer';
 
 class Search extends React.Component {
   constructor() {
@@ -49,7 +50,7 @@ class Search extends React.Component {
     return (
       <section data-testid="page-search" className="search-section">
         <Header />
-        <form action="" className="form-music-content">
+        <form action="" className="form-music-content" onSubmit={ this.handleFindArtist }>
           <label
             htmlFor="inpSearchArtist"
             className="label-artist-content"
@@ -60,6 +61,7 @@ class Search extends React.Component {
               id="inpSearchArtist"
               data-testid="search-artist-input"
               className="input-artist-content"
+              autoComplete="off"
               placeholder="Nome do artista"
               value={ artist }
               onChange={ this.handleInputArtist }
@@ -71,7 +73,7 @@ class Search extends React.Component {
             data-testid="search-artist-button"
             className="button-container button-search-artist"
             disabled={ !this.handleValidateInput() }
-            onClick={ this.handleFindArtist }
+            // onClick={ this.handleFindArtist }
           >
             PESQUISAR
           </button>

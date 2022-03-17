@@ -41,7 +41,7 @@ class Login extends React.Component {
       <section className="login-content-page">
         { responseCome ? <Redirect to="/search" /> : null }
         <section data-testid="page-login" className="form-content">
-          <form action="" className="login__form">
+          <form action="" className="login__form" onSubmit={ this.handleSendUser }>
             <label htmlFor="input-name">
               <input
                 className="width-content"
@@ -55,11 +55,11 @@ class Login extends React.Component {
               />
             </label>
             <button
-              type="button"
+              type="submit"
               className="width-content button-container-login"
               data-testid="login-submit-button"
               disabled={ !this.handleValidate() }
-              onClick={ this.handleSendUser }
+              // onClick={ this.handleSendUser }
             >
               ENTRAR
             </button>

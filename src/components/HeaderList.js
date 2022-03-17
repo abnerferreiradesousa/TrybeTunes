@@ -12,7 +12,7 @@ const HeaderList = [
   {
     url: '/',
     dataTestId: 'link-to-profile',
-    title: 'LOG OUT',
+    title: 'SAIR',
   },
 ];
 

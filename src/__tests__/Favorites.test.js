@@ -5,7 +5,7 @@ import renderWithRouter from '../renderWithRouter';
 import userEvent from '@testing-library/user-event';
 import Favorites from '../pages/Favorites';
 
-const navLinks = ['SEARCH', 'FAVORITOS', 'LOG OUT'];
+const navLinks = ['SEARCH', 'FAVORITOS', 'SAIR'];
 
 describe('Tela Favorites', () => {
   it('Tem h1 de apresentação e o título', async () => {

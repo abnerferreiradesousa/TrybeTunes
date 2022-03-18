@@ -19,7 +19,10 @@
 }
 
 .card__label {
+  display: flex;
+  justify-content: center;
   margin: 10px;
+  width: 15%;
 
 }
 
@@ -34,7 +37,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
 
   .card-content {
     align-items: center;

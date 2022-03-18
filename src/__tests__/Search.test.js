@@ -5,7 +5,7 @@ import renderWithRouter from '../renderWithRouter';
 import userEvent from '@testing-library/user-event';
 import Search from '../pages/Search';
 
-const navLinks = ['SEARCH', 'FAVORITOS', 'LOG OUT'];
+const navLinks = ['SEARCH', 'FAVORITOS', 'SAIR'];
 
 describe('Tela de Search', () => {
   const { debug, getByRole, getByText, getByPlaceholderText, getAllByRole } = screen;

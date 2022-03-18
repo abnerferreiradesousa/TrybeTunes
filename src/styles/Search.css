@@ -59,10 +59,10 @@ body {
 }
 
 .each-album:hover {
-  height: 359px;
-  transition: 0.5s;
   box-shadow: 10px 10px 19px rgb(43, 53, 199);
-  width: 270px;
+  height: 349px;
+  transition: all 0.5s ease-in-out;
+  width: 260px;
 }
 
 img {
